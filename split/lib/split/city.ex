@@ -1,3 +1,3 @@
 defmodule Split.City do
-  defstruct [:name, :visitor_count]
+  defstruct [:id, :name, :visitor_count]
 end

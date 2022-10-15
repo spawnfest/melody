@@ -14,7 +14,7 @@ defmodule Split.EventFlusher do
   def init(opts) do
     # 5 seconds for now. Usually we want hourly average
     flush_interval = Keyword.get(opts, :flush_interval, 5_000)
-    {:ok, flush_interval, {:contniue, :schedule_next_run}}
+    {:ok, flush_interval, {:continue, :schedule_next_run}}
   end
 
   @impl true
