@@ -27,7 +27,7 @@ defmodule Split.EventCollector do
   @impl true
   def handle_cast({:incr_visitor_count, %City{} = city}, visitors) do
     # business logic
-    updated_visitors = Map.update(visitors, city.id, 1, &(&1 + 1))
+    updated_visitors = Map.update(visitors, city.name, 1, &(&1 + 1))
     {:noreply, updated_visitors}
   end
 
