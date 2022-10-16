@@ -20,15 +20,15 @@ iex(1)> Split.run_supervised
 
 
 ## Additional Example.
-The Partition Supervisor example is made in refernce to example by Alex Koutomos. [code][https://github.com/BeamBasket/beam_basket_talk]
-The Aim of participation is to try to create a Partition Supervisor that runs across nodes in cluster. If the Steps below are incomplete, then this example needs more time.
+The Partition Supervisor example refers example by Alex Koutomos. [Code](https://github.com/BeamBasket/beam_basket_talk)
+The Aim of participation is to try to create a Partition Supervisor that runs across nodes in cluster. If the Steps below are incomplete, then this experiment needs more time.
 
 
 ## Steps
-[x] Implement Partition Supervisor on single Node
-[ ] Create a cluster of nodes
-[ ] Test sending message across nodes. connect nodes by pg or global or whatever.
-[ ] Implement Partition Supervisor in a way that partitions run on different Nodes.
+- [x] Implement Partition Supervisor on single Node
+- [ ] Create a cluster of nodes
+- [ ] Test sending message across nodes. connect nodes by pg or global or whatever.
+- [ ] Implement Partition Supervisor in a way that partitions run on different Nodes.
 
 
 ## About Me
