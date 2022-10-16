@@ -6,7 +6,7 @@ defmodule Split.EventCollector do
 
   # --- Client Api ---
   def start_link(opts) do
-    GenServer.start_link(__MODULE__, opts, name: __MODULE__)
+    GenServer.start_link(__MODULE__, opts)
   end
 
   def add_visitor(%City{} = city) do
@@ -14,7 +14,8 @@ defmodule Split.EventCollector do
     GenServer.cast(server, {:incr_visitor_count, city})
   end
 
-  def flush_visitor_count(partition) do
+  def flush_visitor_count(_city) do
+    partition = 1
     server = {:via, PartitionSupervisor, {EventCollectorPartitionSupervisor, partition}}
     GenServer.call(server, :flush_visitors)
   end

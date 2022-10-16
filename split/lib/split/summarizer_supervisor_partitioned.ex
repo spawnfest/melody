@@ -14,6 +14,9 @@ defmodule Split.SummarizerSupervisorPartitoned do
     children = [
       {
         PartitionSupervisor,
+        # child_spec: SummarizerSupervisorPartitoned,
+        # name: SummarizerPartitionSupervisor,
+        # partitions: 1
         child_spec: EventCollector,
         name: EventCollectorPartitionSupervisor,
         partitions: partitions
