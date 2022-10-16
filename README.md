@@ -1,14 +1,14 @@
-# melody by Sandesh Soni - spawnfest
-
+# Melody by Sandesh Soni - spawnfest
 
 Partition Supervisor across nodes in a cluster.
 
-We send a message.
-Params -> city, some value.
-
-At the end I want cumulative data.
+Our Example.
+We log some visitor visited a city.
+At the end I want cumulative data for given period of time.
+10,000 people visited this city in last one hour.
 
 city data goes in one supervisor.
+We Partition this. i.e few cities data will go to Partition 1, few to Partition 2, Partition 3, etc
 
 ## Instructions
 
