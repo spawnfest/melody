@@ -10,12 +10,12 @@ defmodule Split.EventCollector do
   end
 
   def add_visitor(%City{} = city) do
-    server = __MODULE__
+    server = {:via, PartitionSupervisor, {EventCollectorPartitionSupervisor, city}}
     GenServer.cast(server, {:incr_visitor_count, city})
   end
 
-  def flush_visitor_count do
-    server = __MODULE__
+  def flush_visitor_count(partition) do
+    server = {:via, PartitionSupervisor, {EventCollectorPartitionSupervisor, partition}}
     GenServer.call(server, :flush_visitors)
   end
 
