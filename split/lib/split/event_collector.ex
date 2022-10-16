@@ -10,11 +10,13 @@ defmodule Split.EventCollector do
   end
 
   def add_visitor(%City{} = city) do
-    GenServer.cast(__MODULE__, {:incr_visitor_count, city})
+    server = __MODULE__
+    GenServer.cast(server, {:incr_visitor_count, city})
   end
 
   def flush_visitor_count do
-    GenServer.call(__MODULE__, :flush_visitors)
+    server = __MODULE__
+    GenServer.call(server, :flush_visitors)
   end
 
   # --- Server Callbacks ---
