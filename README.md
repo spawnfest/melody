@@ -35,4 +35,5 @@ The Aim of participation is to try to create a Partition Supervisor that runs ac
 - Myself Sandesh Soni
 - India.
 - Open to work (fulltime/part-time)
-- contact - hello at myname dot com (h**o@sa*****s**i.com)
+- contact - hello at myname dot com
+- website www.sandeshsoni.com
